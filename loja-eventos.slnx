@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Contracts/Contracts.csproj" />
+    <Project Path="src/Mensageria/Mensageria.csproj" />
+  </Folder>
+  <Folder Name="/src/Estoque/">
+    <Project Path="src/Estoque/Estoque.Api/Estoque.Api.csproj" />
+    <Project Path="src/Estoque/Estoque.Lambda/Estoque.Lambda.csproj" />
+  </Folder>
+  <Folder Name="/src/Pagamento/">
+    <Project Path="src/Pagamento/Pagamento.Lambda/Pagamento.Lambda.csproj" />
+  </Folder>
+  <Folder Name="/src/Pedidos/">
+    <Project Path="src/Pedidos/Pedidos.Api/Pedidos.Api.csproj" />
+    <Project Path="src/Pedidos/Pedidos.Domain/Pedidos.Domain.csproj" />
+    <Project Path="src/Pedidos/Pedidos.Infrastructure/Pedidos.Infrastructure.csproj" />
+    <Project Path="src/Pedidos/Pedidos.Lambda/Pedidos.Lambda.csproj" />
+  </Folder>
+</Solution>

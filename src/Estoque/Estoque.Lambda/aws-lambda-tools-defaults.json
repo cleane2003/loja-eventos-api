@@ -1,0 +1,11 @@
+{
+  "region": "us-east-2",
+  "configuration": "Release",
+  "function-name": "estoque-reservar",
+  "function-handler": "Estoque.Lambda::Estoque.Lambda.Function::FunctionHandler",
+  "function-runtime": "dotnet10",
+  "function-memory-size": 512,
+  "function-timeout": 15,
+  "function-role": "estoque-lambda-role",
+  "environment-variables": "TABELA_ESTOQUE=Estoque;TABELA_RESERVAS=ReservasEstoque;TOPICO_ESTOQUE_RESERVADO=estoque-reservado;TOPICO_ESTOQUE_INDISPONIVEL=estoque-indisponivel"
+}

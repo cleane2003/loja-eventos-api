@@ -1,0 +1,11 @@
+{
+  "region": "us-east-2",
+  "configuration": "Release",
+  "function-name": "pedidos-atualizar-status",
+  "function-handler": "Pedidos.Lambda::Pedidos.Lambda.Function::FunctionHandler",
+  "function-runtime": "dotnet10",
+  "function-memory-size": 512,
+  "function-timeout": 15,
+  "function-role": "pedidos-lambda-role",
+  "environment-variables": "TABELA_PEDIDOS=Pedidos"
+}

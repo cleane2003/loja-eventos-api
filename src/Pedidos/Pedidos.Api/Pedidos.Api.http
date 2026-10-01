@@ -1,0 +1,35 @@
+@host = http://localhost:5219
+
+### Criar pedido válido -> 202 Accepted
+# @name criar
+POST {{host}}/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": "C1",
+  "itens": [
+    { "produtoId": "camiseta", "quantidade": 2, "precoUnitario": 50.00 },
+    { "produtoId": "bone", "quantidade": 1, "precoUnitario": 30.00 }
+  ]
+}
+
+### Consultar o pedido criado acima -> 200 OK
+GET {{host}}/pedidos/{{criar.response.body.id}}
+
+### Pedido sem itens -> 400 (regra do domínio)
+POST {{host}}/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": "C1",
+  "itens": []
+}
+
+### Quantidade zero -> 400 (regra do domínio)
+POST {{host}}/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": "C1",
+  "itens": [ { "produtoId": "camiseta", "quantidade": 0, "precoUnitario": 50.00 } ]
+}

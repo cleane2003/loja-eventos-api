@@ -1,0 +1,11 @@
+{
+  "region": "us-east-2",
+  "configuration": "Release",
+  "function-name": "pagamento-cobrar",
+  "function-handler": "Pagamento.Lambda::Pagamento.Lambda.Function::FunctionHandler",
+  "function-runtime": "dotnet10",
+  "function-memory-size": 512,
+  "function-timeout": 15,
+  "function-role": "pagamento-lambda-role",
+  "environment-variables": "TABELA_PAGAMENTOS=Pagamentos;TOPICO_PAGAMENTO_APROVADO=pagamento-aprovado;TOPICO_PAGAMENTO_RECUSADO=pagamento-recusado"
+}
